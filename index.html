@@ -9,45 +9,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif; /* Using a clean, modern font */
+            font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 40px 20px; /* Adjust padding as needed */
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align content to the left */
+            align-items: flex-start;
             justify-content: flex-start;
             min-height: 100vh;
-            background-color: #f8f8f8; /* Light background similar to the image */
-            color: #333; /* Darker text for readability */
+            background-color: #f8f8f8;
+            color: #333;
             line-height: 1.5;
-            max-width: 800px; /* Constrain content width */
-            margin: 0 auto; /* Center the content block */
+            max-width: 800px;
+            margin: 0 auto;
         }
         h1 {
-            font-size: 2.5em; /* Larger for "Hey I'm Ivana" */
-            font-weight: 700; /* Bold */
+            font-size: 2.5em;
+            font-weight: 700;
             margin-bottom: 20px;
             color: #222;
-            margin-top: 0; /* Ensures it starts at the top without a margin from the deleted image */
+            margin-top: 0;
         }
         .main-text {
-            font-size: 1.4em; /* Adjust for main description */
-            font-weight: 400; /* Regular weight */
+            font-size: 1.4em;
+            font-weight: 400;
             margin-bottom: 30px;
             color: #333;
         }
         .secondary-text {
-            font-size: 1em; /* Smaller for the tagline */
+            font-size: 1em;
             font-weight: 400;
             color: #666;
             margin-top: 0;
+            margin-bottom: 30px; /* Added margin below the tagline */
         }
         .hand-wave {
-            font-size: 1.2em; /* Adjust hand wave size */
+            font-size: 1.2em;
             margin-left: 5px;
             vertical-align: middle;
         }
-
+        /* Style for the button */
+        .contact-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #222; /* Dark background */
+            color: #fff; /* White text */
+            text-decoration: none; /* Remove underline from link */
+            border-radius: 5px; /* Rounded corners */
+            font-weight: 700;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .contact-button:hover {
+            background-color: #555; /* Darker on hover */
+        }
         /* Basic responsiveness for smaller screens */
         @media (max-width: 768px) {
             body {
@@ -72,5 +87,8 @@
         Your partner in working smarter, staying organized, and moving
         forward with purpose.
     </p>
+
+    <a href="mailto:ivana@gimeno.ca" class="contact-button">Stay in touch</a>
+
 </body>
 </html>
