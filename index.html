@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivana | Product Strategist</title>
+    <title>Ivana Gimeno | Digital Strategist</title> 
+    <link rel="icon" type="image/png" href="ig.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -23,6 +25,15 @@
             max-width: 800px;
             margin: 0 auto;
         }
+        /* Style for the restored profile picture */
+        .profile-picture {
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
         h1 {
             font-size: 2.5em;
             font-weight: 700;
@@ -41,27 +52,27 @@
             font-weight: 400;
             color: #666;
             margin-top: 0;
-            margin-bottom: 30px; /* Added margin below the tagline */
+            margin-bottom: 30px;
         }
         .hand-wave {
             font-size: 1.2em;
             margin-left: 5px;
             vertical-align: middle;
         }
-        /* Style for the button */
+        /* Style for the button (MODIFIED) */
         .contact-button {
             display: inline-block;
             padding: 12px 25px;
-            background-color: #222; /* Dark background */
-            color: #fff; /* White text */
-            text-decoration: none; /* Remove underline from link */
-            border-radius: 5px; /* Rounded corners */
+            background-color: #D3D3D3; /* Light Gray */
+            color: #333; /* Darker text for contrast */
+            text-decoration: none; 
+            border-radius: 5px;
             font-weight: 700;
             font-size: 1em;
             transition: background-color 0.3s;
         }
         .contact-button:hover {
-            background-color: #555; /* Darker on hover */
+            background-color: #C0C0C0; /* Slightly darker gray on hover */
         }
         /* Basic responsiveness for smaller screens */
         @media (max-width: 768px) {
@@ -78,6 +89,8 @@
     </style>
 </head>
 <body>
+    <img src="IMG_7736.jpeg" alt="Ivana's Profile Picture" class="profile-picture">
+
     <h1>Hey <span class="hand-wave">👋</span> I'm Ivana.</h1>
     <p class="main-text">
         I'm a freelance product strategist based in Montreal, with 10+ years of experience
