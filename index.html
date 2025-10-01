@@ -1,112 +1,391 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivana Gimeno | Digital Strategist</title> 
-    <link rel="icon" type="image/png" href="ig.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            min-height: 100vh;
-            background-color: #f8f8f8;
-            color: #333;
-            line-height: 1.5;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        /* Style for the restored profile picture */
-        .profile-picture {
-            width: 120px; 
-            height: 120px; 
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-        }
-        h1 {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #222;
-            margin-top: 0;
-        }
-        .main-text {
-            font-size: 1.4em;
-            font-weight: 400;
-            margin-bottom: 30px;
-            color: #333;
-        }
-        .secondary-text {
-            font-size: 1em;
-            font-weight: 400;
-            color: #666;
-            margin-top: 0;
-            margin-bottom: 30px;
-        }
-        .hand-wave {
-            font-size: 1.2em;
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-        /* Style for the button (MODIFIED) */
-        .contact-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #D3D3D3; /* Light Gray */
-            color: #333; /* Darker text for contrast */
-            text-decoration: none; 
-            border-radius: 5px;
-            font-weight: 700;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-        .contact-button:hover {
-            background-color: #C0C0C0; /* Slightly darker gray on hover */
-        }
-        /* Basic responsiveness for smaller screens */
-        @media (max-width: 768px) {
-            body {
-                padding: 30px 15px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            .main-text {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivana Gimeno - Product Strategist</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background-color: #fafafa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 4rem 0 6rem;
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 2rem;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1a1a1a;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      color: #4a4a4a;
+      margin-bottom: 3rem;
+      font-weight: 400;
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 0;
+      background-color: #ffffff;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: #4a4a4a;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #9AE66E;
+      color: #1a1a1a;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-top: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(154, 230, 110, 0.3);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #9AE66E;
+      text-align: center;
+    }
+
+    .section-description {
+      text-align: center;
+      color: #6a6a6a;
+      font-size: 1.125rem;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    .service-card p {
+      color: #6a6a6a;
+      line-height: 1.6;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    .project-card p {
+      color: #6a6a6a;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background-color: #f0f0f0;
+      color: #4a4a4a;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+    }
+
+    /* Feedback Grid */
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feedback-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .feedback-card p {
+      color: #4a4a4a;
+      font-style: italic;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .client-name {
+      font-weight: 600;
+      color: #1a1a1a;
+      font-style: normal;
+    }
+
+    .client-role {
+      color: #6a6a6a;
+      font-size: 0.875rem;
+      font-style: normal;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: #a0a0a0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .tagline {
+        font-size: 1.25rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .services-grid,
+      .projects-grid,
+      .feedback-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <img src="IMG_7736.jpeg" alt="Ivana's Profile Picture" class="profile-picture">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_7736%20Large-Rmcxw9SNvR6owzNYlUxosTxNdzyK9m.jpeg" alt="Ivana Gimeno" class="profile-image">
+      <h1>Hey there, I'm Ivana.</h1>
+      <p class="tagline">Your partner in working smarter, staying organized, and shipping with purpose.</p>
+    </div>
+  </section>
 
-    <h1>Hey there, I'm Ivana.</h1>
-    <p class="main-text">
-        Your partner in working smarter, staying organized, 
-        and shipping with purpose.
-    </p>
-    <p class="secondary-text">
-        I'm a freelance product strategist based in Montreal with 10+ years turning complexity into clarity. 
-        I've led teams through full platform migrations, payment overhauls, and supply chain transformations—the kind of work that touches every corner of a business. 
-        I thrive on making the ambiguous actionable and getting stakeholders aligned when it matters most.
-    </p>
-    <p class="secondary-text">
-        I bring a bias for action and a track record of driving real outcomes: streamlined operations, faster time-to-market, and products that actually solve problems. 
-        Whether you're navigating a critical pivot or building something from scratch, I'm here to help you move forward with confidence and momentum.
-    </p>
-    
-    <a href="mailto:ivana@gimeno.ca" class="contact-button">Stay in touch</a>
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <div class="about-content">
+        <p>I'm a freelance product strategist based in Montreal with 10+ years turning complexity into clarity. I've led teams through full platform migrations, payment overhauls, and supply chain transformations—the kind of work that touches every corner of a business. I thrive on making the ambiguous actionable and getting stakeholders aligned when it matters most.</p>
+        
+        <p>I bring a bias for action and a track record of driving real outcomes: streamlined operations, faster time-to-market, and products that actually solve problems. Whether you're navigating a critical pivot or building something from scratch, I'm here to help you move forward with confidence and momentum.</p>
+        
+        <a href="mailto:ivana@gimeno.ca" class="cta-button">Stay in touch</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Things I Can Help You With</h2>
+      <p class="section-description">Strategic guidance to help your business move forward with clarity and confidence.</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Product Strategy</h3>
+          <p>Define clear product vision and roadmaps that align with business goals and user needs.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Process Optimization</h3>
+          <p>Streamline operations and workflows to increase efficiency and reduce time-to-market.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Platform Migrations</h3>
+          <p>Navigate complex technical transitions with minimal disruption to your business.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Stakeholder Alignment</h3>
+          <p>Get teams and leadership on the same page to move forward with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" style="background-color: #ffffff;">
+    <div class="container">
+      <h2 class="section-title">Past Projects</h2>
+      <p class="section-description">A selection of transformative projects I've led.</p>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Project Title</h3>
+          <p>Brief description of the project, the challenge faced, and the outcome achieved.</p>
+          <div class="project-tags">
+            <span class="tag">Strategy</span>
+            <span class="tag">Migration</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <h3>Project Title</h3>
+          <p>Brief description of the project, the challenge faced, and the outcome achieved.</p>
+          <div class="project-tags">
+            <span class="tag">Operations</span>
+            <span class="tag">Process</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <h3>Project Title</h3>
+          <p>Brief description of the project, the challenge faced, and the outcome achieved.</p>
+          <div class="project-tags">
+            <span class="tag">Product</span>
+            <span class="tag">Launch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedback">
+    <div class="container">
+      <h2 class="section-title">Client Feedback</h2>
+      <p class="section-description">What clients say about working together.</p>
+      
+      <div class="feedback-grid">
+        <div class="feedback-card">
+          <p>"Client testimonial quote goes here. Share specific results or experiences from working together."</p>
+          <p class="client-name">Client Name</p>
+          <p class="client-role">Role, Company</p>
+        </div>
+        
+        <div class="feedback-card">
+          <p>"Client testimonial quote goes here. Share specific results or experiences from working together."</p>
+          <p class="client-name">Client Name</p>
+          <p class="client-role">Role, Company</p>
+        </div>
+        
+        <div class="feedback-card">
+          <p>"Client testimonial quote goes here. Share specific results or experiences from working together."</p>
+          <p class="client-name">Client Name</p>
+          <p class="client-role">Role, Company</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ivana Gimeno. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
